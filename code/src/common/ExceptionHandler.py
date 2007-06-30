@@ -5,11 +5,16 @@
 import sys
 
 class ExceptionHandler:
+	__borg = {}
+	__instance = None
+
 # Class constructor
 	def __init__( self ):
-		self.status = False
-		self.errorMessage = None
-
+		self.__dict__ = self.__borg
+		if( ExceptionHandler.__instance == None ):
+			self.status = False
+			self.errorMessage = None
+			ExceptionHandler.__instance = self
 
 # Raises an exception
 	def __raiseException( self ):

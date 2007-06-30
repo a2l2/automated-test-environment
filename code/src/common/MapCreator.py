@@ -4,17 +4,26 @@
 # Import of user defined Python modules 
 import sys
 import os
+import string
 
 # Import of all common user defined Python modules 
 import common
 from common import *
 
 class MapCreator:
-# Class constructor
+	__borg = {}
+	__instance = None
+# Class constructor (a Borg)
 	def __init__( self ):
-		self.configMap = {}
-		self.exceptionHandler = ExceptionHandler()
+		# Ensuring the __dict__ is the same for every instance / object
+		self.__dict__ = self.__borg
 
+		# If its the first instance of the class
+		if( MapCreator.__instance == None ):
+			self.configMap = {}
+			self.exceptionHandler = ExceptionHandler()
+			MapCreator.__instance = self
+	
 
 # Locates the path to the configuration file
 	def __locateFile( self, fileName = None ):
@@ -29,7 +38,6 @@ class MapCreator:
 	def __generateMapFromFile( self, fileName = None ):
 		# Open file in read mode
 		fileRef = open( self.__locateFile( fileName ), 'r' )
-		counter = 0
 
 		# Split all lines on '='
 		for line in fileRef.readlines():
@@ -41,22 +49,24 @@ class MapCreator:
 					# Removing the new lines
 					value = element[0].split( '\n' ) 
 					if( value[ 0 ].lower() == "testlist" ):
+						self.configMap[ "testList" ] = {}
 						continue
-
+			
 	 				# Removing the commented out test cases
 			 		if( value[ 0 ][ 0 ] == '#' ):
 						continue
 					
 			 		# Flooding configMap
-			 		key = "testCase" + `counter`
-					self.configMap[ key ] = value[ 0 ]
-					counter += 1
+					value[ 0 ] = value[ 0 ].expandtabs(1)
+					testname = value[ 0 ].split( ' ' )
+					moduleName = testname[ 0 ].split( '.' )
+					self.configMap[ "testList" ][ moduleName[ 0 ] ] = string.atoi(testname[ -1 ])
 				continue	
 	
 			# Removing the new lines
 			values = element[ -1 ].split( '\n' )
 			self.configMap[ element[ 0 ] ] = values[ 0 ].strip( '"' )
-
+			
 		fileRef.close()
 		return True
 
@@ -90,4 +100,9 @@ class MapCreator:
 			self.exceptionHandler.CheckStatus( status, "Could not flood config map with values from the command line" )
 		
 		# Return config map
+		return self.configMap
+
+
+# Returns the config map
+	def GetMap( self ):
 		return self.configMap
