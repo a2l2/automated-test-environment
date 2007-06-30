@@ -74,9 +74,59 @@ class ATE:
 		mapCreatorObj = MapCreator( )
 		self.configMap = mapCreatorObj.Execute( argv )
 
-		for key in self.configMap.keys():
-			print key, ":", self.configMap[ key ]
+		return True
 
+
+# Executes the specified test
+	def __executeTest( self, module = None ):
+		if( module == None ):
+			self.exceptionHandler.CheckStatus( False, "Test execution failed - No module loaded." )
+		
+		try:
+			print "[INFO] :", module.Info()
+		except:
+			self.exceptionHandler.CheckStatus( False, "Test execution failed - Info() method not defined." )
+		
+		print "[INFO] : Beginning test - Calling Main() method."
+
+		try:
+			status = module.Main()
+			self.exceptionHandler.CheckStatus( status, "Test execution failed - Main() returned unsuccessfully." )
+		except:
+			self.exceptionHandler.CheckStatus( False, "Test execution failed - Main() method not defined." )
+		
+
+# Test processing starts here
+	def StartTesting( self ):
+		counter = 0
+		testsCompleted = 0
+
+		for key in self.configMap[ "testList" ]:
+			# Import test module, if in current sys.path
+			try:
+				module = __import__(  key, globals(), locals(), [], -1 )
+			except:
+				# Add testPath variable (if defined) to sys.path
+				if( self.configMap.__contains__( "testPath" ) ):
+					sys.path.append( self.configMap[ "testPath" ] )
+				else:	
+					self.exceptionHandler.CheckStatus( False, "Could not file test: " + key + " in current scope." )
+				
+				# Import test module, if in testPath scope
+				try: 
+					module = __import__( key, globals(), locals(), [], -1 )
+				except:
+					self.exceptionHandler.CheckStatus( False, "Could not file test: " + key + " in current / testPath scope." )
+
+			print "[INFO] : Test", key, "will have", self.configMap[ "testList" ][ key], "iterations"
+			for counter in range( 0, self.configMap[ "testList" ][ key] ):
+				self.__executeTest( module )
+				print "[INFO] : Iteration count -", counter+1, "completed successfully."
+			testsCompleted += 1
+
+			print "[INFO] : Test", key, "completed successfully.\n"
+
+	 	print "[INFO] : Summary -", testsCompleted, "tests completed successfully."
 		return True
 
 
@@ -86,5 +136,8 @@ if __name__ == "__main__":
 	sys.path.append( "..\\lib\\" )
 	ATEobj = ATE()
 	ATEobj.StartFunctions( sys.argv )
+	
+	ATEobj.StartTesting()
+	
 	sys.exit( 0 )
 
