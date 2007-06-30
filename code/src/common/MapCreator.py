@@ -22,7 +22,7 @@ class MapCreator:
 			if( os.path.exists( os.path.join( path, fileName ) ) ):
 				return os.path.join( path, fileName )
 		
-	 	self.exceptionHandler.CheckStatus( status, "Could not find configuration file " + fileName )		
+	 	self.exceptionHandler.CheckStatus( False, "Could not find configuration file " + fileName )		
 		
 
 # Generation of the map from a file
@@ -55,7 +55,7 @@ class MapCreator:
 	
 			# Removing the new lines
 			values = element[ -1 ].split( '\n' )
-			self.configMap[ element[ 0 ] ] = values[ 0 ]
+			self.configMap[ element[ 0 ] ] = values[ 0 ].strip( '"' )
 
 		fileRef.close()
 		return True
@@ -67,7 +67,7 @@ class MapCreator:
 			if( argument[0][0] != '-' ):
 				continue
 		
-			argument = argument.strip( '-' )
+			argument = argument.strip( '-"' )
 			list = argument.split( '=' )
 			self.configMap[ list[ 0 ] ] = list[ 1 ]
 		
