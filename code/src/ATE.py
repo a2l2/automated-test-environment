@@ -87,13 +87,10 @@ class ATE:
 		except:
 			self.exceptionHandler.CheckStatus( False, "Test execution failed - Info() method not defined." )
 		
-		print "[INFO] : Beginning test - Calling Main() method."
+		print "[INFO] : Beginning test - Calling Main() method.\n"
 
-		try:
-			status = module.Main()
-			self.exceptionHandler.CheckStatus( status, "Test execution failed - Main() returned unsuccessfully." )
-		except:
-			self.exceptionHandler.CheckStatus( False, "Test execution failed - Main() method not defined." )
+		status = module.Main()
+		self.exceptionHandler.CheckStatus( status, "Test execution failed - Main() returned unsuccessfully." )
 		
 
 # Test processing starts here
@@ -110,13 +107,13 @@ class ATE:
 				if( self.configMap.__contains__( "testPath" ) ):
 					sys.path.append( self.configMap[ "testPath" ] )
 				else:	
-					self.exceptionHandler.CheckStatus( False, "Could not file test: " + key + " in current scope." )
+					self.exceptionHandler.CheckStatus( False, "Could not find test: " + key + " in current scope." )
 				
 				# Import test module, if in testPath scope
 				try: 
 					module = __import__( key, globals(), locals(), [], -1 )
 				except:
-					self.exceptionHandler.CheckStatus( False, "Could not file test: " + key + " in current / testPath scope." )
+					self.exceptionHandler.CheckStatus( False, "Could not find test: " + key + " in current / testPath scope." )
 
 			print "[INFO] : Test", key, "will have", self.configMap[ "testList" ][ key], "iterations"
 			for counter in range( 0, self.configMap[ "testList" ][ key] ):
@@ -126,13 +123,14 @@ class ATE:
 
 			print "[INFO] : Test", key, "completed successfully.\n"
 
-	 	print "[INFO] : Summary -", testsCompleted, "tests completed successfully."
+	 	print "[INFO] : Summary -", testsCompleted, "test(s) completed successfully."
 		return True
 
 
 # Calling the main() method
 if __name__ == "__main__":
 	sys.path.append( os.path.join( os.getcwd(), "configurations" ) )
+	sys.path.append( os.getcwd() )
 	sys.path.append( "..\\lib\\" )
 	ATEobj = ATE()
 	ATEobj.StartFunctions( sys.argv )
