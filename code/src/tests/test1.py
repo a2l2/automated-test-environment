@@ -13,7 +13,7 @@ from common import *
 
 class TestCase1:
 	def GetValue( self ):
-		return "Woo hoo - 1 "
+		return "Running Test Case1 "
 
 def Info():
 	return "This is information about the test1"

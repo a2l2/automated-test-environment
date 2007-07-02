@@ -1,6 +1,6 @@
 class Test2:
 	def GetValue( self ):
-		return "Woo hoo - 2 "
+		return "Processing Test Case2 "
 
 def Info():
 	return "This is information about the test2"
