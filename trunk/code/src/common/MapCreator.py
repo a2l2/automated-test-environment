@@ -61,9 +61,9 @@ class MapCreator:
 					testname = value[ 0 ].split( ' ' )
 
 					# If iterations not specified, use default 1
-					if( len(testname) == 1 or testname[-1].isalpha() != True ):
+					if( len(testname) == 1 or ( testname[-1].isalpha() != True and testname[-1].isdigit() != True ) ):
 						testname.append( "1" )
-
+				
 					moduleName = testname[ 0 ].split( '.' )
 					self.configMap[ "testList" ][ moduleName[ 0 ] ] = string.atoi(testname[ -1 ])
 				continue	
