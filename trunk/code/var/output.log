@@ -1,0 +1,298 @@
+07-07 15:36 - ATE                                  - [DEBUG]: ATE.__init__() method called.
+07-07 15:36 - ATE                                  - [DEBUG]: ATE.StartFunctions() method called.
+07-07 15:36 - ATE.MapCreator                       - [DEBUG]: MapCreator.__init__() method called.
+07-07 15:36 - ATE.MapCreator                       - [DEBUG]: MapCreator.Execute() method called.
+07-07 15:36 - ATE.MapCreator                       - [DEBUG]: MapCreator.__generateMapFromFile() method called.
+07-07 15:36 - ATE.MapCreator                       - [DEBUG]: MapCreator.__locate() method called.
+07-07 15:36 - ATE.MapCreator                       - [DEBUG]: MapCreator.__generateMapFromFile() method called.
+07-07 15:36 - ATE.MapCreator                       - [DEBUG]: MapCreator.__locate() method called.
+07-07 15:36 - ATE.MapCreator                       - [DEBUG]: MapCreator.__generateMapFromArgv() method called.
+07-07 15:36 - ATE.MapCreator                       - [DEBUG]: MapCreator.__generateObjectMap() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.py - GetObject() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__loadList() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__init__() method called.
+07-07 15:36 - ATE.MapCreator                       - [DEBUG]: MapCreator.GetConfigMap() method called.
+07-07 15:36 - ATE                                  - [DEBUG]: ATE.GetConfigMap() method called.
+07-07 15:36 - ATE                                  - [DEBUG]: ATE.StartTesting() method called.
+07-07 15:36 - ATE                                  - [INFO]: Test TestCase-AT-01258 will have 1 iterations.
+07-07 15:36 - ATE                                  - [DEBUG]: ATE.__executeTest() method called.
+07-07 15:36 - ATE.TestCase-AT-01258                - [DEBUG]: TestCase-AT-01258: Info() method called
+07-07 15:36 - ATE                                  - [INFO]: This test performs a UDC from the local drive to iSCSI device. The file count is varied based on the "averageFileCount" parameter.
+07-07 15:36 - ATE                                  - [INFO]: Beginning test - Calling Main() method.
+
+07-07 15:36 - ATE.TestCase-AT-01258                - [DEBUG]: TestCase-AT-01258: Main() method called
+07-07 15:36 - ATE.MapCreator                       - [DEBUG]: MapCreator.GetConfigMap() method called.
+07-07 15:36 - ATE.MapCreator                       - [DEBUG]: MapCreator.GetObjectMap() method called.
+07-07 15:36 - ATE.CommandConverter                 - [DEBUG]: CommandConverter.__init__() method called.
+07-07 15:36 - ATE.TestCase-AT-01258                - [DEBUG]: TestCase-AT-01258: TestOperations.__init__() method called
+07-07 15:36 - ATE.TestCase-AT-01258                - [DEBUG]: TestCase-AT-01258: TestOperations.__StartTest() method called
+07-07 15:36 - ATE.TestCase-AT-01258                - [DEBUG]: TestCase-AT-01258: TestOperations.__checkParameters() method called
+07-07 15:36 - ATE.TestCase-AT-01258                - [INFO]: Phase - I: Starting the upload operation
+07-07 15:36 - ATE.TestCase-AT-01258                - [DEBUG]: TestCase-AT-01258: TestOperations.__uploadDownload() method called
+07-07 15:36 - ATE.TestCase-AT-01258                - [DEBUG]: TestCase-AT-01258: TestOperations.__createTestDirectory() method called
+07-07 15:36 - ATE.TestCase-AT-01258                - [DEBUG]: TestCase-AT-01258: TestOperations.__deletePrevious() method called
+07-07 15:36 - ATE.CommandConverter                 - [DEBUG]: CommandConverter.CommandLookup() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.GetCommandMap() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.removeDirectory() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.removeDirectory() successfully completed all operations
+07-07 15:36 - ATE.CommandConverter                 - [DEBUG]: CommandConverter.CommandLookup() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.GetCommandMap() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.createDirectory() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.createDirectory() successfully completed all operations
+07-07 15:36 - ATE.TestCase-AT-01258                - [INFO]: Using test bed - 100K
+07-07 15:36 - ATE.TestCase-AT-01258                - [DEBUG]: TestCase-AT-01258: TestOperations.__createTestDirectory() method called
+07-07 15:36 - ATE.CommandConverter                 - [DEBUG]: CommandConverter.CommandLookup() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.GetCommandMap() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.createDirectory() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.createDirectory() successfully completed all operations
+07-07 15:36 - ATE.TestCase-AT-01258                - [INFO]: Starting transfer of files
+07-07 15:36 - ATE.TestCase-AT-01258                - [DEBUG]: TestCase-AT-01258: TestOperations.__copyFile() method called
+07-07 15:36 - ATE.CommandConverter                 - [DEBUG]: CommandConverter.CommandLookup() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.GetCommandMap() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.copyFile() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.copyFile() successfully completed all operations
+07-07 15:36 - ATE.TestCase-AT-01258                - [DEBUG]: File file100_250.dat copied successfully
+07-07 15:36 - ATE.TestCase-AT-01258                - [INFO]: 1 files copied
+07-07 15:36 - ATE.TestCase-AT-01258                - [INFO]: Using test bed - 10K
+07-07 15:36 - ATE.TestCase-AT-01258                - [DEBUG]: TestCase-AT-01258: TestOperations.__createTestDirectory() method called
+07-07 15:36 - ATE.CommandConverter                 - [DEBUG]: CommandConverter.CommandLookup() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.GetCommandMap() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.createDirectory() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.createDirectory() successfully completed all operations
+07-07 15:36 - ATE.TestCase-AT-01258                - [INFO]: Starting transfer of files
+07-07 15:36 - ATE.TestCase-AT-01258                - [DEBUG]: TestCase-AT-01258: TestOperations.__copyFile() method called
+07-07 15:36 - ATE.CommandConverter                 - [DEBUG]: CommandConverter.CommandLookup() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.GetCommandMap() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.copyFile() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.copyFile() successfully completed all operations
+07-07 15:36 - ATE.TestCase-AT-01258                - [DEBUG]: File file100_500.dat copied successfully
+07-07 15:36 - ATE.TestCase-AT-01258                - [INFO]: 1 files copied
+07-07 15:36 - ATE.TestCase-AT-01258                - [INFO]: Using test bed - 10M
+07-07 15:36 - ATE.TestCase-AT-01258                - [DEBUG]: TestCase-AT-01258: TestOperations.__createTestDirectory() method called
+07-07 15:36 - ATE.CommandConverter                 - [DEBUG]: CommandConverter.CommandLookup() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.GetCommandMap() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.createDirectory() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.createDirectory() successfully completed all operations
+07-07 15:36 - ATE.TestCase-AT-01258                - [INFO]: Starting transfer of files
+07-07 15:36 - ATE.TestCase-AT-01258                - [DEBUG]: TestCase-AT-01258: TestOperations.__copyFile() method called
+07-07 15:36 - ATE.CommandConverter                 - [DEBUG]: CommandConverter.CommandLookup() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.GetCommandMap() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.copyFile() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.copyFile() successfully completed all operations
+07-07 15:36 - ATE.TestCase-AT-01258                - [DEBUG]: File file1_5.dat copied successfully
+07-07 15:36 - ATE.TestCase-AT-01258                - [INFO]: 1 files copied
+07-07 15:36 - ATE.TestCase-AT-01258                - [INFO]: Using test bed - 1M
+07-07 15:36 - ATE.TestCase-AT-01258                - [DEBUG]: TestCase-AT-01258: TestOperations.__createTestDirectory() method called
+07-07 15:36 - ATE.CommandConverter                 - [DEBUG]: CommandConverter.CommandLookup() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.GetCommandMap() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.createDirectory() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.createDirectory() successfully completed all operations
+07-07 15:36 - ATE.TestCase-AT-01258                - [INFO]: Starting transfer of files
+07-07 15:36 - ATE.TestCase-AT-01258                - [DEBUG]: TestCase-AT-01258: TestOperations.__copyFile() method called
+07-07 15:36 - ATE.CommandConverter                 - [DEBUG]: CommandConverter.CommandLookup() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.GetCommandMap() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.copyFile() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.copyFile() successfully completed all operations
+07-07 15:36 - ATE.TestCase-AT-01258                - [DEBUG]: File file1_5.dat copied successfully
+07-07 15:36 - ATE.TestCase-AT-01258                - [INFO]: 1 files copied
+07-07 15:36 - ATE.TestCase-AT-01258                - [INFO]: Using test bed - 5M
+07-07 15:36 - ATE.TestCase-AT-01258                - [DEBUG]: TestCase-AT-01258: TestOperations.__createTestDirectory() method called
+07-07 15:36 - ATE.CommandConverter                 - [DEBUG]: CommandConverter.CommandLookup() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.GetCommandMap() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.createDirectory() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.createDirectory() successfully completed all operations
+07-07 15:36 - ATE.TestCase-AT-01258                - [INFO]: Starting transfer of files
+07-07 15:36 - ATE.TestCase-AT-01258                - [DEBUG]: TestCase-AT-01258: TestOperations.__copyFile() method called
+07-07 15:36 - ATE.CommandConverter                 - [DEBUG]: CommandConverter.CommandLookup() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.GetCommandMap() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.copyFile() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.copyFile() successfully completed all operations
+07-07 15:36 - ATE.TestCase-AT-01258                - [DEBUG]: File file1_5.dat copied successfully
+07-07 15:36 - ATE.TestCase-AT-01258                - [INFO]: 1 files copied
+07-07 15:36 - ATE.TestCase-AT-01258                - [INFO]: 5 files from 5 test beds successfully uploaded 
+07-07 15:36 - ATE.TestCase-AT-01258                - [INFO]: Phase - II: Starting the download operation
+07-07 15:36 - ATE.TestCase-AT-01258                - [DEBUG]: TestCase-AT-01258: TestOperations.__uploadDownload() method called
+07-07 15:36 - ATE.TestCase-AT-01258                - [DEBUG]: TestCase-AT-01258: TestOperations.__createTestDirectory() method called
+07-07 15:36 - ATE.TestCase-AT-01258                - [DEBUG]: TestCase-AT-01258: TestOperations.__deletePrevious() method called
+07-07 15:36 - ATE.CommandConverter                 - [DEBUG]: CommandConverter.CommandLookup() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.GetCommandMap() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.removeDirectory() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.removeDirectory() successfully completed all operations
+07-07 15:36 - ATE.CommandConverter                 - [DEBUG]: CommandConverter.CommandLookup() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.GetCommandMap() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.createDirectory() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.createDirectory() successfully completed all operations
+07-07 15:36 - ATE.TestCase-AT-01258                - [INFO]: Using test bed - 100K
+07-07 15:36 - ATE.TestCase-AT-01258                - [DEBUG]: TestCase-AT-01258: TestOperations.__createTestDirectory() method called
+07-07 15:36 - ATE.CommandConverter                 - [DEBUG]: CommandConverter.CommandLookup() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.GetCommandMap() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.createDirectory() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.createDirectory() successfully completed all operations
+07-07 15:36 - ATE.TestCase-AT-01258                - [INFO]: Starting transfer of files
+07-07 15:36 - ATE.TestCase-AT-01258                - [DEBUG]: TestCase-AT-01258: TestOperations.__copyFile() method called
+07-07 15:36 - ATE.CommandConverter                 - [DEBUG]: CommandConverter.CommandLookup() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.GetCommandMap() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.copyFile() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.copyFile() successfully completed all operations
+07-07 15:36 - ATE.TestCase-AT-01258                - [DEBUG]: File file100_250.dat copied successfully
+07-07 15:36 - ATE.TestCase-AT-01258                - [INFO]: 1 files copied
+07-07 15:36 - ATE.TestCase-AT-01258                - [INFO]: Using test bed - 10K
+07-07 15:36 - ATE.TestCase-AT-01258                - [DEBUG]: TestCase-AT-01258: TestOperations.__createTestDirectory() method called
+07-07 15:36 - ATE.CommandConverter                 - [DEBUG]: CommandConverter.CommandLookup() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.GetCommandMap() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.createDirectory() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.createDirectory() successfully completed all operations
+07-07 15:36 - ATE.TestCase-AT-01258                - [INFO]: Starting transfer of files
+07-07 15:36 - ATE.TestCase-AT-01258                - [DEBUG]: TestCase-AT-01258: TestOperations.__copyFile() method called
+07-07 15:36 - ATE.CommandConverter                 - [DEBUG]: CommandConverter.CommandLookup() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.GetCommandMap() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.copyFile() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.copyFile() successfully completed all operations
+07-07 15:36 - ATE.TestCase-AT-01258                - [DEBUG]: File file100_500.dat copied successfully
+07-07 15:36 - ATE.TestCase-AT-01258                - [INFO]: 1 files copied
+07-07 15:36 - ATE.TestCase-AT-01258                - [INFO]: Using test bed - 10M
+07-07 15:36 - ATE.TestCase-AT-01258                - [DEBUG]: TestCase-AT-01258: TestOperations.__createTestDirectory() method called
+07-07 15:36 - ATE.CommandConverter                 - [DEBUG]: CommandConverter.CommandLookup() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.GetCommandMap() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.createDirectory() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.createDirectory() successfully completed all operations
+07-07 15:36 - ATE.TestCase-AT-01258                - [INFO]: Starting transfer of files
+07-07 15:36 - ATE.TestCase-AT-01258                - [DEBUG]: TestCase-AT-01258: TestOperations.__copyFile() method called
+07-07 15:36 - ATE.CommandConverter                 - [DEBUG]: CommandConverter.CommandLookup() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.GetCommandMap() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.copyFile() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.copyFile() successfully completed all operations
+07-07 15:36 - ATE.TestCase-AT-01258                - [DEBUG]: File file1_5.dat copied successfully
+07-07 15:36 - ATE.TestCase-AT-01258                - [INFO]: 1 files copied
+07-07 15:36 - ATE.TestCase-AT-01258                - [INFO]: Using test bed - 1M
+07-07 15:36 - ATE.TestCase-AT-01258                - [DEBUG]: TestCase-AT-01258: TestOperations.__createTestDirectory() method called
+07-07 15:36 - ATE.CommandConverter                 - [DEBUG]: CommandConverter.CommandLookup() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.GetCommandMap() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.createDirectory() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.createDirectory() successfully completed all operations
+07-07 15:36 - ATE.TestCase-AT-01258                - [INFO]: Starting transfer of files
+07-07 15:36 - ATE.TestCase-AT-01258                - [DEBUG]: TestCase-AT-01258: TestOperations.__copyFile() method called
+07-07 15:36 - ATE.CommandConverter                 - [DEBUG]: CommandConverter.CommandLookup() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.GetCommandMap() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.copyFile() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.copyFile() successfully completed all operations
+07-07 15:36 - ATE.TestCase-AT-01258                - [DEBUG]: File file1_5.dat copied successfully
+07-07 15:36 - ATE.TestCase-AT-01258                - [INFO]: 1 files copied
+07-07 15:36 - ATE.TestCase-AT-01258                - [INFO]: Using test bed - 5M
+07-07 15:36 - ATE.TestCase-AT-01258                - [DEBUG]: TestCase-AT-01258: TestOperations.__createTestDirectory() method called
+07-07 15:36 - ATE.CommandConverter                 - [DEBUG]: CommandConverter.CommandLookup() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.GetCommandMap() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.createDirectory() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.createDirectory() successfully completed all operations
+07-07 15:36 - ATE.TestCase-AT-01258                - [INFO]: Starting transfer of files
+07-07 15:36 - ATE.TestCase-AT-01258                - [DEBUG]: TestCase-AT-01258: TestOperations.__copyFile() method called
+07-07 15:36 - ATE.CommandConverter                 - [DEBUG]: CommandConverter.CommandLookup() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.GetCommandMap() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.copyFile() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.copyFile() successfully completed all operations
+07-07 15:36 - ATE.TestCase-AT-01258                - [DEBUG]: File file1_5.dat copied successfully
+07-07 15:36 - ATE.TestCase-AT-01258                - [INFO]: 1 files copied
+07-07 15:36 - ATE.TestCase-AT-01258                - [INFO]: 5 files from 5 test beds successfully uploaded 
+07-07 15:36 - ATE.TestCase-AT-01258                - [INFO]: Phase - III: Starting compare operation
+07-07 15:36 - ATE.TestCase-AT-01258                - [DEBUG]: TestCase-AT-01258: TestOperations.__compare() method called
+07-07 15:36 - ATE.CommandConverter                 - [DEBUG]: CommandConverter.CommandLookup() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.GetCommandMap() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.compareDirectory() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.compareFile() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: C:\Documents and Settings\Akshay Lal\My Documents\Work Assignments\ATE\testData\100K\file100_250.dat = C:\Documents and Settings\Akshay Lal\My Documents\Work Assignments\Test Cases\newTestBed\100K\file100_250.dat
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: Source and destination file were identical
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.compareDirectories() successfully completed all operations
+07-07 15:36 - ATE.TestCase-AT-01258                - [INFO]: Test bed 100K comparison completed successfully
+07-07 15:36 - ATE.CommandConverter                 - [DEBUG]: CommandConverter.CommandLookup() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.GetCommandMap() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.compareDirectory() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.compareFile() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: C:\Documents and Settings\Akshay Lal\My Documents\Work Assignments\ATE\testData\10K\file100_500.dat = C:\Documents and Settings\Akshay Lal\My Documents\Work Assignments\Test Cases\newTestBed\10K\file100_500.dat
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: Source and destination file were identical
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.compareDirectories() successfully completed all operations
+07-07 15:36 - ATE.TestCase-AT-01258                - [INFO]: Test bed 10K comparison completed successfully
+07-07 15:36 - ATE.CommandConverter                 - [DEBUG]: CommandConverter.CommandLookup() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.GetCommandMap() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.compareDirectory() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.compareFile() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: C:\Documents and Settings\Akshay Lal\My Documents\Work Assignments\ATE\testData\10M\file1_5.dat = C:\Documents and Settings\Akshay Lal\My Documents\Work Assignments\Test Cases\newTestBed\10M\file1_5.dat
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: Source and destination file were identical
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.compareDirectories() successfully completed all operations
+07-07 15:36 - ATE.TestCase-AT-01258                - [INFO]: Test bed 10M comparison completed successfully
+07-07 15:36 - ATE.CommandConverter                 - [DEBUG]: CommandConverter.CommandLookup() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.GetCommandMap() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.compareDirectory() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.compareFile() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: C:\Documents and Settings\Akshay Lal\My Documents\Work Assignments\ATE\testData\1M\file1_5.dat = C:\Documents and Settings\Akshay Lal\My Documents\Work Assignments\Test Cases\newTestBed\1M\file1_5.dat
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: Source and destination file were identical
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.compareDirectories() successfully completed all operations
+07-07 15:36 - ATE.TestCase-AT-01258                - [INFO]: Test bed 1M comparison completed successfully
+07-07 15:36 - ATE.CommandConverter                 - [DEBUG]: CommandConverter.CommandLookup() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.GetCommandMap() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.compareDirectory() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.compareFile() method called
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: CommonCommands.__ifExists() method called.
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [DEBUG]: C:\Documents and Settings\Akshay Lal\My Documents\Work Assignments\ATE\testData\5M\file1_5.dat = C:\Documents and Settings\Akshay Lal\My Documents\Work Assignments\Test Cases\newTestBed\5M\file1_5.dat
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: Source and destination file were identical
+07-07 15:36 - ATE.CommandConverter.CommonCommands  - [INFO]: CommonCommands.compareDirectories() successfully completed all operations
+07-07 15:36 - ATE.TestCase-AT-01258                - [INFO]: Test bed 5M comparison completed successfully
+07-07 15:36 - ATE.TestCase-AT-01258                - [INFO]: All test beds successfully compared
+07-07 15:36 - ATE.TestCase-AT-01258                - [INFO]: TestCase-AT-01258: completed successfully
+07-07 15:36 - ATE                                  - [INFO]: Iteration count - 1 completed successfully.
+
+07-07 15:36 - ATE                                  - [INFO]: Test TestCase-AT-01258 completed 1 iterations successfully.
+
+07-07 15:36 - ATE                                  - [INFO]: Summary - 1 test(s) completed successfully.
