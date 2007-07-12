@@ -113,7 +113,7 @@ class MapCreator:
 				continue
 
 			try:
-				module = __import__( fileName[ 0 ], globals(), locals(), [], -1 )
+				module = __import__( fileName[ 0 ] )
 			except:
 				self.__checkStatus( False, "Could not load module " + fileName[0] )
 

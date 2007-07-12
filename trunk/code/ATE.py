@@ -105,7 +105,7 @@ class ATE:
 		for key in self.configMap[ "testList" ]:
 			# Import test module, if in current sys.path
 			try:
-				module = __import__(  key, globals(), locals(), [], -1 )
+				module = __import__(  key )
 			except:
 				# Add testPath variable (if defined) to sys.path
 				if( self.configMap.__contains__( "testPath" ) ):
@@ -115,7 +115,7 @@ class ATE:
 				
 				# Import test module, if in testPath scope
 				try: 
-					module = __import__( key, globals(), locals(), [], -1 )
+					module = __import__( key )
 				except:
 					self.__checkStatus( False, "Could not find test: " + key + " in current / testPath scope." )
 
