@@ -5,3 +5,6 @@
 - try catch
 	- probably wise to get rid of the try catch and throw cos when something fails the really error gets masked
 	however, theres probably a way to get the try to print the real exception. Need to look into that
+
+- for both config fiels ensure that all commented out lines are not included. As
+off now only the test list conforms to this
