@@ -46,7 +46,14 @@ class CommandConverter:
 			for key in moduleMap.keys():
 				if( key.lower() == argumentMap[ "command" ].lower() ):
 					funcCall = getattr(self.objectMap[ iterator], key)
+					
+					status = funcCall( argumentMap )
+					if( status == False ):
+						self.__checkStatus( False, "Error calling requested function " + key )
+					
+					if( status != True ):
+						return status
+			 		else:
+						return True
 
-					self.__checkStatus( funcCall( argumentMap ), "Error calling requested function " + key )
-
-					return True
+		self.__checkStatus( False, "Could not find specified command - " + argumentMap[ "command" ] )

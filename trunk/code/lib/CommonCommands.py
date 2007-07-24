@@ -201,13 +201,14 @@ class CommonCommands:
 		self.__checkStatus( self.__ifExists( argumentMap[ "destinationPath" ] ), "Test failed - could not find directory " + argumentMap[ "destinationPath" ] )
 
 		for file in os.listdir( argumentMap[ "sourcePath" ] ):
-			localCommandMap = {}
-			localCommandMap[ "command" ] = "compareFiles"
-			localCommandMap[ "sourcePath" ] = argumentMap[ "sourcePath" ]
-			localCommandMap[ "destinationPath" ] = argumentMap[ "destinationPath" ]
-			localCommandMap[ "sourceFileName" ] = file
-			self.__checkStatus( self.compareFile( localCommandMap ), "Test failed - compareFile() failed on file " + file )
-
+			if( os.path.isfile( file ) ):
+				localCommandMap = {}
+				localCommandMap[ "command" ] = "compareFile"
+				localCommandMap[ "sourcePath" ] = argumentMap[ "sourcePath" ]
+				localCommandMap[ "destinationPath" ] = argumentMap[ "destinationPath" ]
+				localCommandMap[ "sourceFileName" ] = file
+				self.__checkStatus( self.compareFile( localCommandMap ), "Test failed - compareFile() failed on file " + file )
+		
 		self.log.info( "CommonCommands.compareDirectories() successfully completed all operations" )
 		return True
 

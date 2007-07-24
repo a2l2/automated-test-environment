@@ -16,10 +16,16 @@ class TestCase1:
 		return "Running Test Case1 "
 
 def Info():
-	return "This is information about the test1"
+	return "test1 does some stuff"
 
 def Main():
-  	print "[INFO] : Processing starts now for test1"
-	objTest = TestCase1()
-	print "[INFO] : Object returned", objTest.GetValue()
+	argsMap = {}
+	argsMap[ "command" ] = "createTestBed"
+	argsMap[ "fileCount" ] = 10
+	argsMap[ "maxFileSize" ] = 102400
+	argsMap[ "fileType" ] = "binary"
+
+	commandConverterObj = CommandConverter()
+	commandConverterObj.CommandLookup( argsMap )
+
 	return True
