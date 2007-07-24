@@ -53,6 +53,10 @@ class MapCreator:
 		for line in fileRef.readlines():
 			element = line.split( ' = ' )
 
+			# Removing the commented lines 
+			if( element[ 0 ][ 0 ] == '#' ):
+				continue
+
 			# If not a key value pair
 			if ( len( element ) < 2 ):
 				if( element[ 0 ].isspace() != True ):
