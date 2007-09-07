@@ -1,0 +1,43 @@
+I. Test Name: FileSizeAndCountBoundaryCheck.py
+#---------------------------------------------
+# Mandatory parameters
+# --------------------
+# iSCSIdrive           - The path to the slice servers (destination)
+# testDirectory        - The directory where the test bed will be created
+# maxFileCount         - The maximum number of files that will be created
+# maxFileSize          - The maximum file size that will be created
+# fileType             - The type of test file that needs to be generated ( Text / Binary / Mixed )
+#
+# Optional Parameters
+# -------------------
+# stub                 - Binary variable - If True - Doesn't mount or unmount any partition   
+# fileSizeIterator     - Steps in which the file size will be incremented
+# fileCountIterator    - Steps in which the file count will be incremented
+# minFileSize          - The smallest file size the test will start with
+# minFileCount         - The smallest file count the test will start with
+# testBedPath          - If new test bed is not needed, then the path of an existing bed must be provided 
+# testDirectoryName    - This defines the name of the directory on the slice server and the local directory name to where files are copied back from the slice server
+# testBedDirectoryName - Defines the name of the test bed directory
+
+
+II. Test Name: VaryDirectoryDepth.py 
+#-----------------------------------
+# Mandatory parameters
+# --------------------
+# iSCSIdrive           - The path to the slice servers (destination)
+# testDirectory        - The directory where the tes bed will be created
+# maxFileCount         - The maximum number of files that will be created
+# maxFileSize          - The maximum file size that will be created
+# fileType             - The type of test file that needs to be generated ( Text / Binary / Mixed )
+# directoryDepth       - The maximum depth of the directory structure
+
+
+III. Test Name: VaryFileCountAndSize.py 
+#--------------------------------------
+# Mandatory parameters
+# --------------------
+# iSCSIdrive           - The path to the slice servers (destination)
+# testDirectory        - The directory where the tes bed will be created
+# maxFileCount         - The maximum number of files that will be created
+# maxFileSize          - The maximum file size that will be created
+# fileType             - The type of test file that needs to be generated ( Text / Binary / Mixed )

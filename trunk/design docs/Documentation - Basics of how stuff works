@@ -1,0 +1,110 @@
+I. Executing ATE:
+-----------------
+1. Ensure you have Python installed (2.4+)
+
+2. Checkout the svn repo for ATE from https://svn.cleversafe.net/personal-alal/
+(svn co https://svn.cleversafe.net/personal-alal/ Ate/)
+
+3. Go to ../Ate/trunk/code
+
+4. Edit the two configuration files as required (ate.conf and test.conf) located at ../Ate/trunk/code/src/configurations. For more information look at section II
+
+5. Execute ATE - python ATE.py --testCaseID=10
+(the testCaseID parameter is a dummy parameter, but necessary but as off yet does ntn so put whatever number you want) 
+
+6. Log go to ../Ate/trunk/code/var
+
+
+II. Configuration files: (../Ate/trunk/code/src/configurations)
+-----------------------
+There are two configuration files (1) ate.conf and (2) test.conf
+ate.conf is used to define ATE specific parameters such as libPath (path to all libraries) and testDirectory (location where local test files will be created)
+test.conf is used to define test case specific parameters (key-value pairs). Most test cases needs cerating user paramerters. This file defines them.
+
+All lines prefixed with a # will be commented out.
+
+The only important thing to mention is that test.conf also defines which test are to be executed. All the test you want to run should be place under the TestList heading. You can also define the number of times the test needs to be executed by placin the number right after the test name
+	Sample:
+	-------
+	fileCount = 100
+
+	TestList
+	VaryDirectoryDepth.py	2
+	#VaryFileCountAndSize.py	1
+	
+
+III. Writing a test: (put all tests in ../Ate/trunk/code/src/tests)
+--------------------
+1. Import whatever modules you need
+
+2. You must import logging ( need to start inheriting from logging class directly)
+
+3. import the common directory
+		import common
+		from common import *
+4. create log variable 
+		log = logging.getlogger( 'ATE.<test name>' )
+
+5. You will need the configuration map ( contains all the variables for the test system defined in ate.conf and test.conf )
+		Sample:
+		-------
+		tempObject = MapCreator()
+		configMap = tempObject.GetConfigMap()
+
+		Now configMap contains the map ( again need to define new architecture so that all tests simply inherit the map )
+
+6. All commands (cp, diff, compare etc) are already defined. To access them create an object of the command converter class (for more information look at section IV)
+		Sample:
+		-------
+		commandConverterObject = CommandConverter()
+
+7. All tests must contain 
+	a. Info() method that is outside the class
+	b. Main() method outside the class
+
+
+IV. Common Commands explained:
+------------------------------ 
+1. Say you want to copy a file
+      commandMap[ "command" ] = "copyFile"
+	  commandMap[ "sourcePath" ] = sourcePath
+      commandMap[ "destinationPath" ] = destinationPath
+      commandMap[ "sourceFileName" ] = fileName
+  
+	   if( destFileName != None ):
+      	commandMap[ "destinationFileName" ] = destFileName
+	
+		commandConverter.CommandLookup( commandMap )
+
+		This always returns True or False. ( The only exception being the CreateTestBed common method that returns the path of the test bed created.)
+
+2. Other common commands are:
+		1. copyFile				-	sourcePath, destinationPath, fileName (destinationFileName - optional)
+		2. createDirectory		-	path, directoryName
+		3. removeDirectory		-	path, directoryName
+		4. compareFile			-	sourcePath, destinationPath, fileName (destinationFileName - optional)
+		5. compareDirectory		-	sourcePath, destinationPath
+		6. createTestBed		-	fileCount, maxFileSize, fileType
+
+
+
+V. Writing a Module: (all common modules to be placed ../Ate/trunk/code/lib)
+--------------------
+1. Import whatever modules you need
+
+2. You must import logging ( need to start inheriting from logging class directly)
+
+3. import the common directory
+		import common
+		from common import *
+
+4. create log variable 
+		log = logging.getlogger( 'ATE.CommandConverter.<module name>' )
+
+5. The module should contain a method (not part of the class) called "GetObject", that should return the object of the class.
+
+6. It is VERY important that the class itself have a "GetCommandMap" method that contains a map of the following structure
+		commandMap[ "<name of function>" ] = ( "<Arg 1>", "<Arg 2>" etc )
+		commandMap[ "<name of function 2>" ] = ( "<Arg 1>", "<Arg 2>" etc )
+	
+
