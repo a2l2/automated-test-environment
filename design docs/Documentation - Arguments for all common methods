@@ -1,0 +1,93 @@
+Function Name: createTestBed
+<ATE_ROOT>/trunk/code/lib/TestBedGenerator.py
+---------------------------------------------
+Mandatory arguments:
+	commandMap[ "command" ] = "createTestBed"							-	This is command name
+   commandMap[ "maxFileSize" ] = maxFileSize							- 	All files will be lesser than this size
+   commandMap[ "fileCount" ] = fileCount								-	The number of files that will be created
+   commandMap[ "fileType" ] = fileType									-	The type of files that will be generated (Binary / Text / Mixed)
+
+Optional arguments:
+	commandMap[ "testBedPath" ] = testBedPath							-	The path where the testBed will be created
+	commandMap[ "testBedDirectoryName" ] = testBedDirectoryName	-	The name of the test bed directory
+	commandMap[ "removePrevious" ] = removePrevious					-	Remove a previous instance of the test bed (Default = True)
+
+	
+Function Name: copyFile
+<ATE_ROOT>/trunk/code/lib/CommonCommands.py
+-------------------------------------------
+Mandatory arguments:
+	commandMap[ "command" ] = "copyFile"								-	This is command name
+   commandMap[ "sourcePath" ] = sourcePath							- 	The path to the source file
+   commandMap[ "fileName" ] = fileName									-	The name of the source file
+   commandMap[ "destinationPath" ] = destinationPath				-	The destination path
+
+Optional arguments:
+	commandMap[ "destinationFileName" ] = destinationFileName	-	The destination file name
+
+	
+Function Name: createDirectory
+<ATE_ROOT>/trunk/code/lib/CommonCommands.py
+-------------------------------------------
+Mandatory arguments:
+	commandMap[ "command" ] = "createDirectory"						-	This is command name
+   commandMap[ "path" ] = path											- 	The path at which the directory needs to be created
+   commandMap[ "directoryName" ] = directoryName					-	The name of the directory
+
+Optional arguments:
+   commandMap[ "removePrevious" ] = removePrevious					-	Binary agrument that defines whether an existing instance of the directory should be deleted ( Default = True )
+
+   
+Function Name: deleteDirectory
+<ATE_ROOT>/trunk/code/lib/CommonCommands.py
+-------------------------------------------
+Mandatory arguments:
+	commandMap[ "command" ] = "deleteDirectory"						-	This is command name
+   commandMap[ "path" ] = path											- 	The path at which the directory needs to be created
+   commandMap[ "directoryName" ] = directoryName					-	The name of the directory
+
+
+Function Name: compareFile
+<ATE_ROOT>/trunk/code/lib/CommonCommands.py
+-------------------------------------------
+Mandatory arguments:
+	commandMap[ "command" ] = "compareFile"							-	This is command name
+   commandMap[ "sourcePath" ] = sourcePath							- 	The path to the source file
+   commandMap[ "sourceFileName" ] = sourceFileName					-	The name of the file at the source directory. (if the optinal parameter "destinationFileName", is not specified then this is taken as the destinationFileName )
+   commandMap[ "destinationPath" ] = destinationPath				-	The destination path
+
+Optional arguments:
+	commandMap[ "destinationFileName" ] = destinationFileName	-	The destination file name
+
+
+Function Name: compareFile
+<ATE_ROOT>/trunk/code/lib/CommonCommands.py
+-------------------------------------------
+Mandatory arguments:
+	commandMap[ "command" ] = "compareDirectories"					-	This is command name
+   commandMap[ "sourcePath" ] = sourcePath							- 	The path to the source directory
+   commandMap[ "destinationPath" ] = destinationPath				-	The path to the destination directory
+
+
+Function Name: compareFile
+<ATE_ROOT>/trunk/code/lib/CommonCommands.py
+-------------------------------------------
+Mandatory arguments:
+	commandMap[ "command" ] = "renameFile"								-	This is command name
+   commandMap[ "sourcePath" ] = path									- 	The path to the source file
+   commandMap[ "sourceFileName" ] = sourceFileName					-	The name of the file at the source directory. (if the optinal parameter "destinationFileName", is not specified then this is taken as the destinationFileName )
+   commandMap[ "destinationFileName" ] = destinationFileName	-	The new name of the file
+
+
+Function Name: uploadDownload
+<ATE_ROOT>/trunk/code/common/Interface.py
+-------------------------------------------
+Mandatory arguments:
+	commandMap[ "command" ] = "uploadDownload"						-	This is command name
+   commandMap[ "sourcePath" ] = sourcePath							- 	The path to the source directory
+   commandMap[ "destinationPath" ] = destinationPath				-	The path to the destination directory
+   commandMap[ "testBedPath" ] = testBedPath							-	The path to the current test bed
+   
+Optional arguments:
+	commandMap[ "testDirectoryName" ] = testDirectoryName			-	The name of the directory which will contain the files on the slice server (upload) and on the local machine (download) - Defaults to TestDirectory
+   
