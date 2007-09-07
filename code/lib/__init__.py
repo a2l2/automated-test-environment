@@ -1,2 +1,3 @@
 from CommonCommands import CommonCommands
 from TestBedGenerator import TestBedGenerator
+from AutomatedInstall import AutomatedInstall
