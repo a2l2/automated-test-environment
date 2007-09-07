@@ -1,31 +1,47 @@
-# Test script for test ID: AT-01258 
-#----------------------------------
+# Test Name - test1.py
+#---------------------
 
-# Import of Python libraries
-import string
-import os
-import sys
+import TestTemplate
+from TestTemplate import *
 
-# Import of all common user defined Python modules 
-import common
-from common import *
+class test1(TestTemplate):
+    def __init__(self):
+        self.__log = self.GetLogObject( "test1" )
+        self.__log.debug( "test1.__init__() method called." )
+    
+    def Info( self ):
+        self.__log.info( "test1.Info() - Tests whether the TestTemplate methods work." )
+        return True
 
+    def Main( self, argsMap = None ):
+        self.__log.info( "test1.Main() method called." )
+        
+        # Check to see whether the GetArguments method works correctly
+        self.__log.info( "Beginning test for method - GetArguments." )
 
-class TestCase1:
-	def GetValue( self ):
-		return "Running Test Case1 "
+        localArgsMap = {}
+        localArgsMap = self.GetArguments( "test1.py" )
+        if( len(argsMap) == len(localArgsMap) ):
+            for entry in argsMap.keys():
+                if( localArgsMap[entry] == argsMap[entry] ):
+                    continue
+                else:
+                    self.CheckStatus( False, "Error at -", entry, " LocalArgsMap = ", localArgsMap[entry], ": ArgsMap = ", argsMap[entry] )
 
-def Info():
-	return "test1 does some stuff"
+        self.__log.info( "Test successful for method - GetArguments." )
+        
+        
+        # Check to see whether the ExecuteCommand method work correctly
+        self.__log.info( "Beginning test for method - ExecuteCommand." )
 
-def Main():
-	argsMap = {}
-	argsMap[ "command" ] = "createTestBed"
-	argsMap[ "fileCount" ] = 10
-	argsMap[ "maxFileSize" ] = 102400
-	argsMap[ "fileType" ] = "binary"
+        newArgsMap = {}
+        newArgsMap[ "command" ] = "createTestBed"
+        newArgsMap[ "fileCount" ] = "10"
+        newArgsMap[ "maxFileSize" ] = "102400"
+        newArgsMap[ "fileType" ] = "mixed"
+        newArgsMap[ "testBedPath" ] = argsMap[ "testBedPath" ]
 
-	commandConverterObj = CommandConverter()
-	commandConverterObj.CommandLookup( argsMap )
+        testBedPath = self.ExecuteCommand( newArgsMap )
+        self.__log.info( "Test successful for method - ExecuteCommand." )
 
-	return True
+        self.TestComplete( True )
